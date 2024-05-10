@@ -13,17 +13,33 @@ module.exports = {
         path: path.resolve(__dirname, "./dist"),
         filename: "[name].bundle.js",
     },
+    module: {
+        rules: [
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "images/",
+                        },
+                    },
+                ],
+            },
+        ],
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: "webpack Boilerplate",
             template: path.resolve(__dirname, "./public/src/pages/index.html"), // Fixed path
             filename: "index.html",
         }),
-        new HtmlWebpackPlugin({
-            title: "webpack Boilerplate",
-            template: path.resolve(__dirname, "./public/src/pages/about.html"), // Fixed path
-            filename: "about.html",
-        }),
+        // new HtmlWebpackPlugin({
+        //     title: "webpack Boilerplate",
+        //     template: path.resolve(__dirname, "./public/src/pages/about.html"), // Fixed path
+        //     filename: "about.html",
+        // }),
         new CleanWebpackPlugin(),
     ],
     devServer: {
