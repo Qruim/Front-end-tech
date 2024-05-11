@@ -1,10 +1,61 @@
-@import url(normilize.css);
+// WARNING: this website WILL look like it's 90th now, I am su... bad at designing from scratch
 
+/*---------imports---------*/
+@import url(normilize.css);
+/*---------/imports---------*/
+
+/*---------variables---------*/
+// color scheme 7 has been chosen
+:root {
+    --color-1: #e63b17;
+    --color-2: #9a4d3d;
+    --color-3: #7b1904;
+    --color-4: #f67c62;
+    --color-5: #f6ac9c;
+
+    --light: #f5f5f5;
+}
+/*---------/variables---------*/
+
+/*---------general styles---------*/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 h1 {
     margin-top: 0;
 }
 
-header {
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--light);
+    &:hover {
+        color: var(--light);
+    }
+}
+
+html {
+    font-size: clamp(16px, 1.01vw, 22px);
+}
+
+body {
+    color: var(--color-3);
+}
+
+/*---------/general styles---------*/
+
+/*---------header---------*/
+.page_heading {
+    width: 1170px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
     nav {
         a {
             &.current {
@@ -14,43 +65,81 @@ header {
         }
     }
 }
+/*---------/header---------*/
 
+/*---------default page styles---------*/
+#root {
+    background: linear-gradient(0deg, var(--color-1) 0%, var(--color-5) 100%);
+    min-height: 100vh;
+    & > main {
+        width: 1170px;
+        min-width: 300px;
+        margin: 0 auto;
+    }
+}
+/*---------/default page styles---------*/
+
+/*---------gallery page---------*/
 .page_photo {
     .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        align-items: center;
-        grid-gap: 1rem;
-        a {
-            width: min-content;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            figcaption {
-                width: max-content;
-                max-width: 300px;
-                text-align: center;
+        grid-gap: 2rem 1rem;
+        figure {
+            width: 100%;
+            margin: 0;
+            a {
+                width: min-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: inherit;
+                grid-gap: 0.5rem;
+                figcaption {
+                    width: max-content;
+                    max-width: 300px;
+                    text-align: center;
+                }
                 img {
                     object-fit: cover;
+                    width: 100%;
+                    aspect-ratio: 1;
+                    height: auto;
                 }
             }
         }
     }
 }
+/*---------/gallery page---------*/
 
-#root > main {
-    width: 1170px;
-    min-width: 300px;
-    margin: 0 auto;
+/*---------news page---------*/
+.page_news {
+    .news_section__heading {
+        text-align: center;
+        margin-bottom: 0.5rem;
+        h2 {
+            margin: 0;
+        }
+    }
+    .news_section__article {
+        .photo_caption {
+            text-transform: uppercase;
+        }
+        .news_section__article_header {
+            time {
+                display: block;
+                margin: 1rem 0 0.25rem;
+            }
+        }
+    }
 }
+/*---------/news page---------*/
 
-h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
+/*---------footer---------*/
 footer {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+/*---------/footer---------*/
