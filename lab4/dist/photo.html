@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab 3 - Photos</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <style>
+            body {
+                padding: 1rem;
+            }
+            .gellary img {
+                object-fit: cover;
+            }
+            .gellary figcaption {
+                width: max-content;
+                max-width: 300px;
+                text-align: center;
+            }
+            .gellary a {
+                width: min-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script defer src="main.bundle.js"></script></head>
+    <body>
+        <header>
+            <nav>
+                <h1>Особиста біографія Володимира Корольова</h1>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="rozklad.html">Розповідь</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="photo.html ">Фото</a></li>
+                </ul>
+            </nav>
+            <hr />
+        </header>
+
+        <main>
+            <section>
+                <header>
+                    <h2>Фотоальбом</h2>
+                </header>
+                <article class="gellary">
+                    <figure>
+                        <a href="images/gallery/myImage_1.jpg" target="_blank">
+                            <img src="images/gallery/myImage_1.jpg" width="300" height="300" alt="Я гігант біля озера" />
+                            <figcaption>Я гігант біля озера</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="images/gallery/myImage_2.jpg" target="_blank">
+                            <img src="images/gallery/myImage_2.jpg" width="300" height="300" alt="Я гігант біля бичка" />
+                            <figcaption>Я <s>гігант</s> біля бичка</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="images/gallery/myImage_3.jpg" target="_blank">
+                            <img src="images/gallery/myImage_3.jpg" width="300" height="300" alt="Я показую сердечко" />
+                            <figcaption>Я показую сердечко</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="images/gallery/myImage_4.jpg" target="_blank">
+                            <img src="images/gallery/myImage_4.jpg" width="300" height="300" alt="Я граю на гітарі і сумую після розставання з дівчиною" />
+                            <figcaption>Я граю на гітарі і сумую після розставання з дівчиною</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="images/gallery/myImage_5.jpg" target="_blank">
+                            <img src="images/gallery/myImage_5.jpg" width="300" height="300" alt="Я з авською" />
+                            <figcaption>Я з авською</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="images/gallery/myImage_6.jpg" target="_blank">
+                            <img src="images/gallery/myImage_6.jpg" width="300" height="300" alt="Я був в шоці що мене фотографують" />
+                            <figcaption>Я був в шоці що мене фотографують</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="images/gallery/myImage_7.jpg" target="_blank">
+                            <img src="images/gallery/myImage_7.jpg" width="300" height="300" alt="Я на ДГЕС" />
+                            <figcaption>Я на ДГЕС</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="images/gallery/myImage_8.jpg" target="_blank">
+                            <img src="images/gallery/myImage_8.jpg" width="300" height="300" alt="Я показую два великі пальці вгору в Дніпрі" />
+                            <figcaption>Я показую &#128077;&#128077; в Дніпрі</figcaption>
+                        </a>
+                    </figure>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Copyright 2024 Qruim</p>
+        </footer>
+    </body>
+</html>
