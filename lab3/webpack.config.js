@@ -2,6 +2,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: "development",
@@ -30,6 +31,11 @@ module.exports = {
         ],
     },
     plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: "./public/src/assets/images", to: "images" }, // Копіювати всі файли з src/assets/images в dist/images
+            ],
+        }),
         new HtmlWebpackPlugin({
             title: "webpack Boilerplate",
             template: path.resolve(__dirname, "./public/src/pages/index.html"), // Fixed path
