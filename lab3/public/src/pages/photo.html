@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab 3 - Photos</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+        <style>
+            body {
+                padding: 1rem;
+            }
+            .gellary img {
+                object-fit: cover;
+            }
+            .gellary figcaption {
+                width: max-content;
+                max-width: 300px;
+                text-align: center;
+            }
+            .gellary a {
+                width: min-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1>Особиста біографія Володимира Корольова</h1>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="rozklad.html">Розповідь</a></li>
+                    <li><a href="news.html">Новини</a></li>
+                    <li><a href="photo.html ">Фото</a></li>
+                </ul>
+            </nav>
+            <hr />
+        </header>
+
+        <main>
+            <section>
+                <header>
+                    <h2>Фотоальбом</h2>
+                </header>
+                <article class="gellary">
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_1.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_1.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я гігант біля озера</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_2.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_2.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я <s>гігант</s> біля бичка</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_3.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_3.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я показую сердечко</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_4.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_4.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я граю на гітарі і сумую після розставання з дівчиною</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_5.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_5.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я з авською</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_6.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_6.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я був в шоці що мене фотографують</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_7.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_7.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я на ДГЕС</figcaption>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="<%= require('../assets/img/myImage_8.jpg').default %>" target="_blank">
+                            <img src="<%= require('../assets/img/myImage_8.jpg').default %>" width="300" height="300" />
+                            <figcaption>Я показую &#128077;&#128077; в Дніпрі</figcaption>
+                        </a>
+                    </figure>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Copyright 2024 Qruim</p>
+        </footer>
+    </body>
+</html>

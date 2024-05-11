@@ -35,11 +35,21 @@ module.exports = {
             template: path.resolve(__dirname, "./public/src/pages/index.html"), // Fixed path
             filename: "index.html",
         }),
-        // new HtmlWebpackPlugin({
-        //     title: "webpack Boilerplate",
-        //     template: path.resolve(__dirname, "./public/src/pages/about.html"), // Fixed path
-        //     filename: "about.html",
-        // }),
+        new HtmlWebpackPlugin({
+            title: "webpack Boilerplate",
+            template: path.resolve(__dirname, "./public/src/pages/rozklad.html"), // Fixed path
+            filename: "rozklad.html",
+        }),
+        new HtmlWebpackPlugin({
+            title: "webpack Boilerplate",
+            template: path.resolve(__dirname, "./public/src/pages/photo.html"), // Fixed path
+            filename: "photo.html",
+        }),
+        new HtmlWebpackPlugin({
+            title: "webpack Boilerplate",
+            template: path.resolve(__dirname, "./public/src/pages/news.html"), // Fixed path
+            filename: "news.html",
+        }),
         new CleanWebpackPlugin(),
     ],
     devServer: {
