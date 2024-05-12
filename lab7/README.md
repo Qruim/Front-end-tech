@@ -1,6 +1,4 @@
-# empty-project
-
-Empty project.
+# lab7
 
 ## Building and running on localhost
 
