@@ -1,0 +1,23 @@
+/* set styles on print */
+@media print {
+    header,
+    footer {
+        display: none !important;
+    }
+
+    body {
+        background: none !important;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+    }
+
+    body {
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    @page {
+        margin: 50px;
+    }
+}

@@ -46,6 +46,10 @@ html {
 body {
     color: @color_3;
 }
+.hidden-message {
+    display: none; /* Hide the message by default */
+}
+
 .page_heading {
     width: @bodyWidth;
     max-width: 90%;
@@ -108,6 +112,12 @@ body {
         }
     }
     .news_section__article {
+        figure {
+            img {
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
         .photo_caption {
             text-transform: uppercase;
         }
@@ -123,4 +133,47 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Show the message for Internet Explorer 10 and lower */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .hidden-message {
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: @bodyWidth) {
+    :root {
+        --baseGridTemplateCol: 2;
+    }
+
+    // so when I first created this styles I made #root > main max-width 90%, so it is not needed to set in media wodth 90%
+    // but in the sake of this lab I`ll put here the code
+
+    #root > main,
+    .page_heading {
+        width: 90%;
+        // it has been already centered by -- margin: 0 auto;
+    }
+}
+
+@media (max-width: 991px) {
+    :root {
+        --baseGridTemplateCol: 1;
+    }
+    .page_heading {
+        nav {
+            ul {
+                display: flex;
+                grid-gap: 1rem;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
 }
