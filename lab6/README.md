@@ -1,4 +1,4 @@
-#lab 6
+# lab 6
 
 ## note
 as I have done the previous lab (#5) using scss it was kind of easy to implement this solution using less.
