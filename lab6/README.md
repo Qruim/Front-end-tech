@@ -1,6 +1,7 @@
-# empty-project
+# note
+as I have done the previous lab (#5) using scss it was kind of easy to implement this solution using less.
+I have added more vatiables (default css and less), cleaned up comments etc
 
-Empty project.
 
 ## Building and running on localhost
 
