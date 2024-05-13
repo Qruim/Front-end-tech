@@ -1,0 +1,15 @@
+.expenses-chart {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.expenses-chart-column {
+    flex: 1 0 calc(100% / 12); /* Distribute columns evenly */
+    height: 150px; /* Adjust height as needed */
+    background-color: #2a2a2a; /* Background color of columns */
+    border: 1px solid #ececec; /* Border color of columns */
+    border-radius: 12px; /* Border radius */
+    margin: 0 2px; /* Adjust margin as needed */
+}
