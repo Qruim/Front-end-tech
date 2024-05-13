@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import expensesData from "./data";
+import expensesData from "./mockData/data";
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseFilter from "./components/ExpenseFilter";
 import ExpensesChart from "./components/ExpensesChart";
@@ -15,7 +15,7 @@ function App() {
         setExpenses((prevExpenses) => {
             return [...prevExpenses, expense];
         });
-        setShowForm(false); // Hide the form after adding expense
+        setShowForm(false);
     };
 
     const filterChangeHandler = (selectedYear) => {
@@ -41,7 +41,6 @@ function App() {
                 <ExpensesChart expenses={filteredExpenses} />
                 <div className="expenses-list">
                     {filteredExpenses.map((expense) => {
-                        console.log(expense.id);
                         return <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />;
                     })}
                 </div>

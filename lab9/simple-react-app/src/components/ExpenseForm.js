@@ -1,4 +1,3 @@
-// ExpenseForm.js
 import React, { useState } from "react";
 
 function ExpenseForm(props) {
@@ -22,10 +21,10 @@ function ExpenseForm(props) {
         event.preventDefault();
 
         const expenseData = {
+            id: "e" + new Date().getTime(),
             title: title,
             amount: +amount,
             date: new Date(date),
-            id: new Date().getTime(),
         };
 
         props.onSaveExpenseData(expenseData);
